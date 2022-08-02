@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>4.Marketing Ideas and Strategy</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b8e5ebe5-78ae-44e1-b1bc-c88e54c27d74" class="page sans"><header><h1 class="page-title">4.Marketing Ideas and Strategy</h1></header><div class="page-body"><p id="e845a942-b652-41c6-ae67-e8ac9d5f9d58" class=""><div class="indented"><p id="320020da-b8ac-4f15-b69b-cfea96264922" class=""><mark class="highlight-purple_background">⇒ We follow </mark><mark class="highlight-purple_background"><strong>SMART </strong></mark><mark class="highlight-purple_background">goals.</mark></p><ul id="b121b226-7c50-4f4a-a908-fdd71f62c93f" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-purple_background">S</mark></strong><mark class="highlight-purple_background">- SPECIFIC</mark></li></ul><ul id="1c1ebe59-f054-4556-8a40-cd271a292a9c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple_background"><strong>M</strong></mark><mark class="highlight-purple_background">- MEASURABLE</mark></li></ul><ul id="963a766d-7607-4a69-80ff-68ec9b3f7f45" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple_background"><strong>A</strong></mark><mark class="highlight-purple_background">- ACHIEVEABLE</mark></li></ul><ul id="7c258db7-c8ed-47c4-befb-fc3a8d79578d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple_background"><strong>R</strong></mark><mark class="highlight-purple_background">- RELEVANT</mark></li></ul><ul id="cf058cf1-5c72-433e-b26d-0104ecf1e8fd" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple_background"><strong>T</strong></mark><mark class="highlight-purple_background">-TIME BOUND</mark></li></ul><p id="9d910b41-e58e-4c60-b2a9-114305277780" class="">
+</p><p id="8d98e257-8c57-4b9b-93a1-5dfca483b62b" class="">
+</p></div></p><blockquote id="59d2dbfc-f75c-4975-9594-32b24d27f7f4" class="">Every phase has its own SMART GOALS  and will be given every first of day of the phase it is because it shouldn&#x27;t become overwhelming by planning of every phase from beginning ,,,because it is 15months project.</blockquote><p id="1de6b148-bcff-466d-8d4c-bb9ff11d1d4f" class="">
+</p><h3 id="a29b75b9-e739-4b6c-a561-b56fbac0f5c0" class=""><strong>Complete 15 months What do we Do in general ?</strong></h3><ol type="1" id="7a04f168-c473-41f0-99b2-7931f575bfaa" class="numbered-list" start="1"><li><em><strong>What product and service.</strong></em></li></ol><ol type="1" id="4ad756df-47f8-438f-a251-5fd92c007bbb" class="numbered-list" start="2"><li><em><strong>Business Modal?</strong></em></li></ol><ol type="1" id="1b9d2b18-9f1b-4bc7-91b8-3a8c8148057e" class="numbered-list" start="3"><li><em><strong>Medium of service</strong></em></li></ol><ol type="1" id="e45beee7-2460-4106-97a6-b40491536b1b" class="numbered-list" start="4"><li><em><strong>Key Contextual service</strong></em></li></ol><p id="467e1903-6f40-4551-b322-35378ea716fd" class="">
+</p><ol type="1" id="635e8235-3e54-4881-b121-73f38a378835" class="numbered-list" start="1"><li>What product and services does YR company provide?<ul id="99ec9219-39b3-46b8-80b4-8c8f107deac0" class="bulleted-list"><li style="list-style-type:disc">Client Works (primary work)<ul id="d725afed-d8d0-4d20-b152-a2e93676acf5" class="bulleted-list"><li style="list-style-type:circle">UI/UX Design</li></ul><ul id="d16214ef-fd98-43e4-8d2f-de9f7c74f59b" class="bulleted-list"><li style="list-style-type:circle">Brand Identity and Packaging</li></ul><ul id="51b95b78-a5f3-47b0-830f-9e3a7c529734" class="bulleted-list"><li style="list-style-type:circle">Only Logo Designs too</li></ul><ul id="2af1b3f4-47d0-468a-b553-ea15f48f7f28" class="bulleted-list"><li style="list-style-type:circle">Web Design <ul id="0ffefd55-5615-4f73-a8b2-f649a1e1e255" class="bulleted-list"><li style="list-style-type:square">Real Code</li></ul><ul id="25c38f86-ee08-4f8c-852a-9e270e6c6d2c" class="bulleted-list"><li style="list-style-type:square">Web-flow</li></ul><ul id="8f1a1127-8227-46bf-9293-63ca100babdc" class="bulleted-list"><li style="list-style-type:square">Word-press</li></ul></li></ul><ul id="f19057c9-3e3b-4ba2-96f8-ae9118928966" class="bulleted-list"><li style="list-style-type:circle">Short-term contracts to any works agencies (special or urgent works)</li></ul><ul id="032fb72f-422a-40cc-a8a6-91e5a080471e" class="bulleted-list"><li style="list-style-type:circle">Custom font and illustrations for others design projects.</li></ul></li></ul><ul id="571b8eea-0cdc-47de-9450-293d2e17c77b" class="bulleted-list"><li style="list-style-type:disc"><em>Design Resource</em><mark class="highlight-red">•</mark><ul id="8444843d-615f-4788-8268-2d2a56ad30f7" class="bulleted-list"><li style="list-style-type:circle">UI Kits</li></ul><ul id="d81872d7-e3a7-4b89-82ef-3887c71a060a" class="bulleted-list"><li style="list-style-type:circle">Photoshop Mockups</li></ul><ul id="b285afc5-67e4-4cd7-a4c5-9195a5578e8f" class="bulleted-list"><li style="list-style-type:circle">Textures and Patterns</li></ul><ul id="95bbd3ed-e38e-49b4-bc16-6cf4033966c9" class="bulleted-list"><li style="list-style-type:circle">Photoshop Actions</li></ul><ul id="6ba743bf-738f-4e57-9c2f-a021b0242215" class="bulleted-list"><li style="list-style-type:circle">In-design Layouts</li></ul><ul id="f72a13b2-df5b-451c-baab-f8683eb504b8" class="bulleted-list"><li style="list-style-type:circle">Illustrations  Stickers and custom emojis</li></ul><ul id="5c9e5b17-2e0d-442d-b30a-aa79c4f78694" class="bulleted-list"><li style="list-style-type:circle">Color palettes, gradients, heatmaps </li></ul><ul id="e6fd979d-f8f4-4651-aa17-59204139e7d2" class="bulleted-list"><li style="list-style-type:circle">Photoshop Actions.</li></ul></li></ul><ul id="2bdeb339-c5e5-4a64-8169-423f5af09443" class="bulleted-list"><li style="list-style-type:disc">Development Resources<ul id="a7dd55e7-2046-4a68-91da-78c589cfd014" class="bulleted-list"><li style="list-style-type:circle">Plugins</li></ul><ul id="a9070ba7-98c1-4a81-9e57-7c03397ced09" class="bulleted-list"><li style="list-style-type:circle">Extensions for browsers and PS</li></ul><ul id="9c90d6af-5e26-44a6-bcb0-1b2ab9cf9fd3" class="bulleted-list"><li style="list-style-type:circle">Mini game for designers</li></ul></li></ul><p id="c05ca81a-3f96-421c-9074-17a56c3e30e7" class="">
+</p><ul id="824ff1ba-62dc-4331-bf42-54e21b32a7fd" class="bulleted-list"><li style="list-style-type:disc">Design and Development Courses(paid on website)<ul id="bc28fa00-785f-45fc-b7b0-c922f9b37d35" class="bulleted-list"><li style="list-style-type:circle">Graphic Design Mini Courses</li></ul><ul id="d5687de2-945d-475d-bb1b-f8991b4a2ca0" class="bulleted-list"><li style="list-style-type:circle">UI/UX Courses and Guides</li></ul><ul id="6bcd287c-2cda-49f0-bca8-4a1da6f5a81c" class="bulleted-list"><li style="list-style-type:circle">Articles and Stories</li></ul><ul id="ba8f393a-b86c-4c62-8fd5-aa44894cef7e" class="bulleted-list"><li style="list-style-type:circle">Mini UI Guides and tutorials </li></ul></li></ul><ul id="7aefc80b-a673-42d2-a008-f011cd9659e0" class="bulleted-list"><li style="list-style-type:disc">Other general Services<ul id="b21ff037-6800-4f9b-acf9-8fdd1e97a343" class="bulleted-list"><li style="list-style-type:circle">Ready made custom logos</li></ul><ul id="7d9f68ae-3fde-4637-a5eb-d21784117750" class="bulleted-list"><li style="list-style-type:circle">Website Templates<ul id="765fcaa8-bc0b-436c-a5e1-9918ffd48b48" class="bulleted-list"><li style="list-style-type:square">Code snippets</li></ul><ul id="a58ec0af-f23b-4b5f-8a3d-24cc4b1b9fad" class="bulleted-list"><li style="list-style-type:square">Web-flow</li></ul><ul id="55e20bf3-c72a-4a00-abe3-b1fb39b01ff3" class="bulleted-list"><li style="list-style-type:square">Word-press</li></ul></li></ul></li></ul><ul id="46ef073e-ffd6-4787-8596-8eadb86eca43" class="bulleted-list"><li style="list-style-type:disc">Foundries<ul id="e97ccd94-a54c-4785-8ffe-aa1716dbd6be" class="bulleted-list"><li style="list-style-type:circle">Iconography</li></ul><ul id="8532ef50-f77b-4932-bca3-32312abaa50f" class="bulleted-list"><li style="list-style-type:circle">Fonts (YR Type Foundry)</li></ul><ul id="d196ecf1-b4fb-4d22-bec8-b0210d5b8c9f" class="bulleted-list"><li style="list-style-type:circle">Stock PNG’s</li></ul></li></ul><ul id="e0ec6c0c-455e-4f8b-a6f5-b898b2b2ff49" class="bulleted-list"><li style="list-style-type:disc">Print Services<ul id="9f6b2579-d363-4a52-ad51-b407839c157f" class="bulleted-list"><li style="list-style-type:circle">Print Designs</li></ul><ul id="70f9fa99-15ab-4bdb-bff0-a5eaad5a5af8" class="bulleted-list"><li style="list-style-type:circle">Clothing&#x27;s and accessories </li></ul></li></ul></li></ol><ol type="1" id="f3a58741-04d8-4c20-a3e9-a9bca35e808f" class="numbered-list" start="2"><li>What is main <em><strong>Business Modal?</strong></em><ul id="e7cffd87-5682-4b79-90c4-bee3b6b196e7" class="bulleted-list"><li style="list-style-type:disc">YR mainly works B2C for all Design Resources</li></ul><ul id="b9c76ab2-2c04-4204-bf0b-c1754481a79a" class="bulleted-list"><li style="list-style-type:disc">Sometime Like fonts and icons we will do B2B</li></ul><p id="0a6c1270-4c82-43bb-9d6a-76b3f00426df" class=""><mark class="highlight-teal_background">B2B - Business to Business ( customers are indirect to the company)</mark></p><p id="1caf8be3-8ab4-429f-81ca-a2bbd15646d9" class=""><mark class="highlight-teal_background">B2C - Business to Customer (customers are direct to the company).</mark></p><p id="a9d5d608-fbd4-42fb-8868-612d21e12589" class="">
+</p></li></ol><ol type="1" id="a3109df9-9dc7-40bf-964d-c1ffbcf79f34" class="numbered-list" start="3"><li>What is the <strong>Medium of Service ?</strong><p id="090fe17e-efb0-4952-9d6a-b0d366f905a3" class="">Both <strong>Online and Offline</strong></p><ul id="3bd5cb1b-4030-4714-bbef-59cd253e1532" class="bulleted-list"><li style="list-style-type:disc"><strong>Online : </strong>Design Resources<mark class="highlight-red">•</mark></li></ul><ul id="6f9f5def-3d26-4103-ace1-a579f70c14a3" class="bulleted-list"><li style="list-style-type:disc"><strong>Offline </strong>: Pintables and apparels</li></ul></li></ol><ol type="1" id="8bee4b69-b7c6-4f3f-8c2e-cf6cfa3bf403" class="numbered-list" start="4"><li><strong>Key contextual Service ?</strong><p id="20fc48d9-4255-4d3e-812e-42a10023fb4c" class="">Design Resources<mark class="highlight-red">• </mark>selling and clients service.</p><p id="9908639a-315b-49e1-bb26-0a20581b0883" class="">
+</p><p id="3a1278d7-5e69-4a2f-b3b6-88629562eb4e" class="">
+</p><p id="333ec557-06d0-4ec7-b3a9-64bcd7bc9e9a" class="">
+</p><h3 id="1d794aff-a2ca-4682-a6df-dbeeb52a0ded" class=""><strong>Strategy </strong></h3><blockquote id="4bc7ca50-e855-4518-ae1f-8750734a9cb5" class="">Every phase has own strategies (explained detailed in every phase)</blockquote><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="272061f6-1735-4568-aa2d-f3038ff2c11c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">I did like because if any strategy fails if we do phase wise we can change easily and if we do one solid strategy and if it won’t work it will be wasted and whole plan ruin so I want to keep strategy as flexible from every phase.</div></figure><p id="e544b89f-ca4c-4715-b52b-fd4102bc2edb" class="">
+</p><blockquote id="988ac447-a90a-4ef0-8d59-9aaaa79bdb9d" class="">general Strategy is just follow the phase’s strategy.</blockquote><p id="63c92e87-fdb2-4fff-8579-df91b963b515" class="">
+</p><p id="0f16d702-9b66-4055-8cb5-0aa2cf75b5e9" class="">
+</p></li></ol></div></article></body></html>

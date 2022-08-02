@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>YR Designers Phase -1 Saga I</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="143a0cb7-eae4-4343-8de4-a9239e2551d9" class="page sans"><header><img class="page-cover-image" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/YR_Graphic_Designers.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/insta_Logo_2.png"/></div><h1 class="page-title">YR Designers Phase -1 Saga I</h1></header><div class="page-body"><figure id="66aa0254-21dc-4877-964b-6a019a16574c" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/Planning(August)%2066aa025421dc4877964b6a019a16574c.html"><img class="icon" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/Planning(August)%2066aa025421dc4877964b6a019a16574c/insta_Logo_2.png"/>Planning(August)</a></figure><h1 id="230f9e27-1044-4caa-9ce2-54aca92d8d3e" class=""><strong>YR Design Studios SAGA 01 whole plan</strong></h1><p id="c69953b1-8e16-46d9-a11d-54240b1ac321" class=""><em><strong>Project Details:</strong></em></p><table id="2637579e-ddb9-4609-a294-bd140f5a1034" class="simple-table"><tbody><tr id="b38d1ea8-4ad1-4d31-9007-9f7d97f08caa"><td id="Ljpc" class="" style="width:271px">Project Name</td><td id="^w@A" class="block-color-blue" style="width:271px"><strong>Trust the process 100 to 100K</strong></td></tr><tr id="1e70d906-5b39-4fd7-8cf0-775b1bd6fdc4"><td id="Ljpc" class="" style="width:271px">Pioneers</td><td id="^w@A" class="block-color-blue" style="width:271px">  (Pruthviraj and Yuya mei)</td></tr><tr id="cd86e68d-7c11-42e9-8682-876557656a4e"><td id="Ljpc" class="" style="width:271px">Date of Launch</td><td id="^w@A" class="block-color-blue" style="width:271px"><strong>August 01 2022</strong></td></tr><tr id="2811f441-68e9-4226-8313-6ed1c1344e41"><td id="Ljpc" class="" style="width:271px">Date of End</td><td id="^w@A" class="block-color-blue" style="width:271px">December 30 2023</td></tr><tr id="d44796e6-8085-44ef-a7ff-cc97e6090f88"><td id="Ljpc" class="" style="width:271px">Total Time period </td><td id="^w@A" class="block-color-blue" style="width:271px"><strong>517 Days (1years 5months)</strong></td></tr><tr id="6387659b-fb83-43ab-9f02-e0074501e20a"><td id="Ljpc" class="" style="width:271px">Target estimation of Earning</td><td id="^w@A" class="block-color-blue" style="width:271px"><strong>100K US dollars </strong>(<strong>79,10,715Indian Rupees)</strong></td></tr></tbody></table><p id="c01a53fe-1f71-43af-b15a-9bd90cee3904" class=""><mark class="highlight-red"><strong>I extended time period 1year to 1 year 5months* (reason in page no.19)</strong></mark></p><p id="30f13993-b337-49a8-b32a-241b38672635" class=""><em><strong>Project Out sketch :</strong></em></p><table id="58e0f64f-86c8-4bd0-b43e-328a333aa28a" class="simple-table"><tbody><tr id="5fe12f34-3ab1-4280-b6ef-88aa3f566894"><td id="g[]C" class="">Saga no. of the project</td><td id="x=N[" class="block-color-blue"><strong>01</strong></td></tr><tr id="289dab68-3a4a-480f-a3fa-c4b5d69f89ae"><td id="g[]C" class="">Total Phases of the project</td><td id="x=N[" class="block-color-blue">08 Phases</td></tr><tr id="ec533a43-c179-4a97-8fb3-5184247f9ab4"><td id="g[]C" class="">Total Fragments of the project</td><td id="x=N[" class="block-color-blue">18 Frags/pages</td></tr></tbody></table><p id="49d47f57-8a97-4a7b-a41e-d385aef056ff" class=""><em><strong>Project Out sketch detailed view :</strong></em></p><ol type="i" id="17e8ebb2-708b-49d3-8d7c-aa2b42d0e4ab" class="numbered-list" start="1"><li>8 phases list (103K is targeted amount)<table id="87141778-6639-4d80-bec5-3bf94f831ec7" class="simple-table"><tbody><tr id="1994d792-a054-4754-bed7-8e6bd7ffec19"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 01</th><td id="fcI|" class="block-color-teal" style="width:240px">August to September (1K)</td></tr><tr id="7a7f9547-b2e4-416a-b7f6-56e3daaae8a6"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 02</th><td id="fcI|" class="block-color-teal" style="width:240px">September to Dec ( 2K)</td></tr><tr id="b3e139cb-f9da-4d36-85aa-a37513fd70c7"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 03</th><td id="fcI|" class="block-color-teal" style="width:240px">(5k) January - Feb</td></tr><tr id="eb75b387-6b7c-4423-b043-9aa4bce63270"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 04</th><td id="fcI|" class="block-color-teal" style="width:240px">(10K) Mar - May</td></tr><tr id="e3be398b-e6c8-4651-af90-8c6ab89db049"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 05</th><td id="fcI|" class="block-color-teal" style="width:240px">(15K) June - August</td></tr><tr id="5bdaa101-4611-45d1-8671-800e44be2af1"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 06</th><td id="fcI|" class="block-color-teal" style="width:240px">(20K) September - October</td></tr><tr id="727cfeb3-29f3-47b5-b3a6-c64e198e7324"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 07</th><td id="fcI|" class="block-color-teal" style="width:240px">(25K) November to December</td></tr><tr id="fd94ec29-45f1-40bb-9baf-b9a331234264"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px">Phase 08</th><td id="fcI|" class="block-color-teal" style="width:240px">(25K)  Extra (Page no.19)</td></tr><tr id="4597a67e-5aba-41a7-8e50-dd83f64634c2"><th id="l@_T" class="simple-table-header-color simple-table-header" style="width:240px"></th><td id="fcI|" class="block-color-teal" style="width:240px"></td></tr></tbody></table></li></ol><ol type="i" id="f25d6b81-a371-4df9-bfe2-40e3c1dbc8e0" class="numbered-list" start="2"><li>Earning Division<figure id="059527d8-0e43-41e7-8a7c-6c6b9157c425" class="image"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/Untitled.png"><img style="width:720px" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/Untitled.png"/></a></figure></li></ol><ol type="i" id="3ee82064-b5a8-440b-9f05-06b2d87cd3b8" class="numbered-list" start="3"><li>18 Fragments<ol type="i" id="346e45ff-8313-4c12-95a9-7ad99e046fe4" class="numbered-list" start="1"><li>15months Planning</li></ol><ol type="i" id="c907b7f4-3724-48a9-8131-659d692ed3df" class="numbered-list" start="2"><li>Vision and mission of the company</li></ol><ol type="i" id="6e2bb283-ab34-4622-8c5b-866261a1c806" class="numbered-list" start="3"><li>Sales Ideas and planning&#x27;s</li></ol><ol type="i" id="4f693f37-ca7e-4c19-92c6-9fb2a2099e0c" class="numbered-list" start="4"><li>Marketing Ideas and strategy</li></ol><ol type="i" id="7f361d86-f4e8-49ad-8fe0-0e869fcfe28f" class="numbered-list" start="5"><li>Instagram  and tik-tok Content</li></ol><ol type="i" id="bd34ffe3-10a8-4d48-a825-fe42d318e4e0" class="numbered-list" start="6"><li>Facebook and Twitter content</li></ol><ol type="i" id="feb8e919-872c-4b82-905c-8b5a25d47deb" class="numbered-list" start="7"><li>YouTube content</li></ol><ol type="i" id="56a0ca93-5c77-4c31-8c56-060184428a86" class="numbered-list" start="8"><li>Instagram reach and community</li></ol><ol type="i" id="f876af83-ecac-48e7-bd14-1f47060f0085" class="numbered-list" start="9"><li>Twitter and Facebook community</li></ol><ol type="i" id="06e5e372-a603-4595-a7cd-e0017f3eb100" class="numbered-list" start="10"><li>Discord Community and Forum</li></ol><ol type="i" id="414fd9e7-0a33-4f42-8838-f9337d590109" class="numbered-list" start="11"><li>Getting Clients and works</li></ol><ol type="i" id="27396826-93c4-44c8-aaf0-316655bce68c" class="numbered-list" start="12"><li>Developing and building Portfolios</li></ol><ol type="i" id="b082264e-a210-49dc-92da-2d151c5f56d7" class="numbered-list" start="13"><li>LinkedIn  For Clients and agencies</li></ol><ol type="i" id="88773a96-72c3-4129-a7b7-1731bdda51cf" class="numbered-list" start="14"><li>Team managements(CAPS)</li></ol><ol type="i" id="c64dcbf9-fb2e-4c5e-91e5-1a4bc7a30e23" class="numbered-list" start="15"><li>Official <code>Behance </code>account and maintaining it</li></ol><ol type="i" id="87eb4bf1-ab28-4bd5-82de-6f777b4b9e65" class="numbered-list" start="16"><li>Team members and Hiring them</li></ol><ol type="i" id="92344db4-26c7-4117-9f80-9e10238f5cda" class="numbered-list" start="17"><li>Reaching and completing 100 K 😄
+and planning for Saga 02 500K per year and Building studio</li></ol><p id="d450dc06-47c4-4857-99ad-0bbd9f5013f7" class="">
+</p><p id="17f565cd-cfcd-40db-abc0-656e4aa13d2e" class="">
+</p><p id="52220376-0d24-4a17-8ecf-8524a2f3f678" class="">
+</p></li></ol><h2 id="6b7f59ac-b95e-40ac-8ed0-53308e19f1ba" class=""> Page 01 
+<span style="border-bottom:0.05em solid"><em><strong>Year plan </strong></em></span></h2><p id="a7f60034-8d8b-4333-b5f3-a293a00f5d54" class="">Page 01 to 06 <strong>Year Plan is making plan for 100K Journey and release it on August 01 ,5Pm (a/c to Atlanta Timings) ,
+</strong>Page 07 to 19 - Proof reading is remaining.</p><p id="0978b186-b1a6-469d-91be-94647a3481b5" class=""><div class="indented"><p id="f51f592b-4585-418d-88d4-9b221d16b619" class="">
+</p></div></p><h2 id="1ed9d754-ac3d-4c26-ae4f-caf7a6a1804d" class="">Page 02</h2><figure id="2d804532-6609-432b-9788-b730ecc5e0e7" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/1%20Vision%20and%20Mission%20of%20the%20company%202d8045326609432b9788b730ecc5e0e7.html"><span class="icon">🎯</span>1.Vision and Mission of the company.</a></figure><h2 id="7c920f93-96ce-4327-b996-21931ef99a56" class="">Page 03</h2><figure id="14a24532-f062-4108-949b-ca9a406f48b1" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/2%20Sales%20Ideas%20and%20plantings%2014a24532f0624108949bca9a406f48b1.html"><span class="icon">💡</span>2. Sales Ideas and plantings</a></figure><h2 id="134f8c14-e054-4474-b374-3cc1c10518d9" class="">Page 04</h2><figure id="b8e5ebe5-78ae-44e1-b1bc-c88e54c27d74" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/4%20Marketing%20Ideas%20and%20Strategy%20b8e5ebe578ae44e1b1bcc88e54c27d74.html">4.Marketing Ideas and Strategy</a></figure><p id="02017916-a53a-464e-9e33-540a64fc3bbb" class="">
+</p><h2 id="d95f647f-a485-42ea-b13d-a5f6e810c217" class="">Page 05</h2><figure id="3cf625e7-d5ff-4f5b-9d9d-b348c2555441" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/5%20Instagram%20Content%20Page%203cf625e7d5ff4f5b9d9db348c2555441.html"><img class="icon" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/5%20Instagram%20Content%20Page%203cf625e7d5ff4f5b9d9db348c2555441/icons8_Instagram.svg"/>5.Instagram Content Page</a></figure><h2 id="af424f5b-b498-4331-81dd-99706b022216" class="">Page 06</h2><figure id="3fd82897-84b7-455f-89da-d1663acf148b" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/7%20Instagram%20Community%203fd8289784b7455f89dad1663acf148b.html"><img class="icon" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/7%20Instagram%20Community%203fd8289784b7455f89dad1663acf148b/icons8_Instagram_1.svg"/>7.Instagram Community</a></figure><h2 id="4a8d95a5-c3bf-43cc-8a8d-01212c1483aa" class="">Page 07</h2><figure id="f2e9e4e8-201c-4d6c-a0f5-7f8ee3ba2447" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/7%20Discord%20f2e9e4e8201c4d6ca0f57f8ee3ba2447.html"><img class="icon" src="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/7%20Discord%20f2e9e4e8201c4d6ca0f57f8ee3ba2447/icons8_discord_new.svg"/>7.Discord</a></figure><h2 id="e855dfc3-47ad-4dc6-b6ff-2afc480b498d" class="">Page 08 </h2><figure id="f9a2c2cc-fd8b-466a-b959-da8e8ab69709" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/8%20Facebook%20Community%20f9a2c2ccfd8b466ab959da8e8ab69709.html">8.Facebook Community</a></figure><h2 id="5873a8d0-9abf-4192-b60f-b6b5df41bdb9" class="">Page 09</h2><figure id="a77d84dc-76df-4049-b4cc-09929e9438d8" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/9%20Twitter%20Community%20a77d84dc76df4049b4cc09929e9438d8.html">9.Twitter Community</a></figure><h2 id="e0494750-4ec6-427f-8cfc-6df4fc1a012d" class="">Page 10</h2><figure id="abb6595f-ba7a-4930-9bc9-ae07c6652440" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/10%20Youtube%20abb6595fba7a49309bc9ae07c6652440.html">10.Youtube</a></figure><h2 id="1075a98d-e536-4373-89e7-b58df687e6a9" class="">Page 11 </h2><figure id="e9af3813-b7a9-4b8c-9845-df996b26b7ff" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/11%20How%20to%20work%20with%20clients%20e9af3813b7a94b8c9845df996b26b7ff.html"><span class="icon">🎯</span>11.How to work with clients</a></figure><h2 id="437852cd-2dda-4a8f-adea-2eab8a09f668" class="">Page 19</h2><figure id="fe7dd18c-bc38-4b3b-a006-4c161a3c2dab" class="link-to-page"><a href="YR%20Designers%20Phase%20-1%20Saga%20I%20059527d80e4341e78a7c6c6b9157c425/Page%2019%5BChanges%20every%20phase%5D%20fe7dd18cbc384b3ba0064c161a3c2dab.html"><span class="icon">🛁</span>Page 19[Changes every phase]</a></figure><h2 id="cb4de80c-4963-4746-976c-d70cb2b098ce" class="">Final Words </h2><p id="c659e73c-b230-4e8a-b57a-015ee2248c0a" class="">minor fixes required August 02 it will be available</p></div></article></body></html>

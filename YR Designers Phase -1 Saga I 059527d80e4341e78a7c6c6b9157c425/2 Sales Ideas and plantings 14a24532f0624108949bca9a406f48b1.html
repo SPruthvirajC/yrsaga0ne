@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2. Sales Ideas and plantings</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="14a24532-f062-4108-949b-ca9a406f48b1" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1573867607131-872f83689352?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💡</span></div><h1 class="page-title">2. Sales Ideas and plantings</h1></header><div class="page-body"><p id="0443c0cd-98ec-4478-9d83-70e68fdd904f" class="">What to charge for doing the design work</p><ul id="e78463ea-8c21-4e87-8e2a-582de52d9798" class="bulleted-list"><li style="list-style-type:disc"><strong>UI/UX </strong><p id="e85230f7-1430-4173-859e-1d8dc51386dc" class="">Expected Works ( 4 Works)</p><p id="389650ec-f7cc-48c2-a01c-28be97929380" class="">Beginning ( phase 1 and 2 )  - <strong>( 20-25 $ )</strong></p><table id="8d25bc05-1e13-49e5-8b2c-12680fc442d7" class="simple-table"><tbody><tr id="990d19fa-42a6-4beb-b707-067ab9c9f774"><td id="|{gf" class="">Total Time</td><td id="Q}iX" class=""><strong>40Hrs (1Week)</strong></td></tr><tr id="446db29b-b856-496f-ba36-6e8ef696d92a"><td id="|{gf" class="">Total charge</td><td id="Q}iX" class=""><strong>300$</strong></td></tr><tr id="674d23de-4094-4396-beda-ce31340a4e11"><td id="|{gf" class="">Per hour</td><td id="Q}iX" class=""><strong>7.5$/hr.</strong></td></tr></tbody></table><ul id="c6533fd1-b6b7-4174-9718-ac7c2f4f5682" class="bulleted-list"><li style="list-style-type:circle">ole and money division<table id="83f81f21-dd7e-4d85-abb2-5ae8af2c852e" class="simple-table"><thead class="simple-table-header"><tr id="6fd90f90-9c05-4ef6-8f15-66c58778b39c"><th id="Zy{@" class="simple-table-header-color simple-table-header">Role</th><th id="sciM" class="simple-table-header-color simple-table-header">Rate (per hour)</th><th id="KYeg" class="simple-table-header-color simple-table-header">Time (hrs.)</th><th id="?cJd" class="simple-table-header-color simple-table-header">Sub-total($)</th></tr></thead><tbody><tr id="85b6c401-0845-4cef-9ca1-5c792f393bc0"><td id="Zy{@" class="">Researcher and planning</td><td id="sciM" class="">20</td><td id="KYeg" class="">5</td><td id="?cJd" class="">100</td></tr><tr id="372bbbef-7589-4223-bfb7-9e174a161dee"><td id="Zy{@" class="">Story and personas</td><td id="sciM" class="">05</td><td id="KYeg" class="">6</td><td id="?cJd" class="">30</td></tr><tr id="cea161f9-3f38-42a3-9a70-6f726431d4f3"><td id="Zy{@" class="">Lo-fi</td><td id="sciM" class="">10</td><td id="KYeg" class="">4</td><td id="?cJd" class="">40</td></tr><tr id="f08f3dc2-2058-4876-9906-8d40514ed233"><td id="Zy{@" class="">Testing </td><td id="sciM" class="">05</td><td id="KYeg" class="">2</td><td id="?cJd" class="">10</td></tr><tr id="71815fcf-1c74-45b4-b41c-1533a30cb752"><td id="Zy{@" class="">Hi-fi and prototype</td><td id="sciM" class="">20</td><td id="KYeg" class="">8</td><td id="?cJd" class="">100</td></tr><tr id="b35bc192-5f25-4c19-ace1-d4c39cf0b184"><td id="Zy{@" class="">Revision and Testing</td><td id="sciM" class="">05</td><td id="KYeg" class="">1</td><td id="?cJd" class="">5</td></tr><tr id="9a2aeac7-93dc-4734-8d6d-37d708a00345"><td id="Zy{@" class="block-color-gray_background">Total</td><td id="sciM" class="block-color-gray_background"></td><td id="KYeg" class="block-color-gray_background">26Hrs</td><td id="?cJd" class="block-color-gray_background">285$</td></tr></tbody></table><p id="13ddbd24-6d6b-4247-9233-d884b8b86037" class="">Total Charge :<strong>300 </strong></p><p id="c941f08b-f160-4f3e-841a-d685c86cb6c2" class="">Worked for : <strong>285 Dollars</strong></p><p id="9c28536a-93cd-4a72-b621-8bc8741969d1" class="">Profit : <strong>300 - 285</strong> = <strong>25$ only</strong></p><p id="15bccdca-bb6c-4622-a4f6-7b84558d9da3" class="">Total Time : 40hrs</p><p id="9ac26fba-bf6e-475e-94d4-8c25f595290d" class="">Total time has to be used : <strong>26Hrs  ( because we are two members we can break the works in two parts).</strong></p><p id="d7e4d66b-2eae-4af1-9295-817a73061c94" class="">Hours saved : 14Hrs</p><p id="4736e7ae-444b-4d17-8f87-e036be222785" class=""> <em>what to do in that 14hrs (of that week)?</em><div class="indented"><p id="8790f9fd-c3e4-45d2-9e65-36d51fad647b" class="">⇒ Building some UI Kits , and other products (explained later in the book Page 11)</p><p id="deac3c67-9a78-4b4b-866d-455272fb47ca" class="">
+</p></div></p><p id="082b337f-71e7-4d17-9426-30df63441d51" class="">
+</p><p id="d857dd38-6cd9-4f64-8985-202621d4e5c2" class="">
+</p></li></ul><ul id="5705bab9-a4de-4294-8a49-d5edc7be41b8" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-brown">How to make client we are worth it?</mark><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ef02a664-4e46-434f-93bb-626730e44225"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Best method to make deal is over Call or Zoom , Texting won’t make us trust and eligible for them.
+Having sessions with the client. Pre-planning how we gonna utilize the time.</div></figure><p id="eee691fc-76cc-4846-8058-73d934b7cee7" class="">
+</p><ul id="e291ed1c-2a44-4ba1-b658-4b6cb30ca374" class="bulleted-list"><li style="list-style-type:square">Explain how we process the total work.</li></ul><ul id="f0fbdab8-0709-4a59-8b74-cf8be273a98e" class="bulleted-list"><li style="list-style-type:square">Explaining him/her how his/her money is utilized and we are not overcharging..</li></ul><ul id="f6ad4c10-d86a-4932-89a7-1c381697c514" class="bulleted-list"><li style="list-style-type:square">Showing previous practice UI designs , our UI kits sold.</li></ul><ul id="ae8f7579-e73b-4d68-8474-0438772cce69" class="bulleted-list"><li style="list-style-type:square">How good are we with the deadlines</li></ul><ul id="e3a0ca8a-00f3-484b-b1d5-f59769b63ad6" class="bulleted-list"><li style="list-style-type:square">Explaining little bit of Trust the process.</li></ul></li></ul><ul id="b9946ae0-b512-4d4a-9635-bcf46a9114c2" class="bulleted-list"><li style="list-style-type:circle">Proposal to the client we like to work with .<ol type="1" id="41910716-c121-454f-9a86-40894e1b782b" class="numbered-list" start="1"><li><strong>Overview &amp; goals</strong><ul id="1d584331-b8af-4d89-8285-14354d62645f" class="bulleted-list"><li style="list-style-type:disc">Talk about their problem, the solution you provide, as well as the goal or end results you’ll be helping them with and which deliverables.</li></ul></li></ol><ol type="1" id="aabb2232-3e3b-4366-88d5-db88d67ff35b" class="numbered-list" start="2"><li>Why the client should be working with you<ul id="8ae443d7-4df6-4bad-9cb0-9c4e7dd083e6" class="bulleted-list"><li style="list-style-type:disc">Tell clients why we are worth working with them. and how do we work with them.</li></ul></li></ol><ol type="1" id="44795853-6c4a-418a-b9dc-796d054a6a61" class="numbered-list" start="3"><li>Package &amp; Pricing<ul id="f2aa951d-f28d-4ec5-8395-6573fc372a84" class="bulleted-list"><li style="list-style-type:disc">Explained before on top of the page ( we will together make a template for all this on 5th 6th and 7th August over <strong>fig jam or Zoom</strong></li></ul></li></ol><ol type="1" id="3c62e0d0-ba58-4b01-bc1e-f1eafd1b0486" class="numbered-list" start="4"><li>Project timeline<ul id="b3793ceb-ead0-47fa-9204-db49d9e236da" class="bulleted-list"><li style="list-style-type:disc">Plan together (i can’t do it alone I need u r opinion) (i will update here once we discuss.</li></ul></li></ol><ol type="1" id="e78d9621-a41b-4de3-a016-9694b870d10f" class="numbered-list" start="5"><li>What’s next?</li></ol><ol type="1" id="a2fd7a3b-5698-4573-bacd-a09dfcecc958" class="numbered-list" start="6"><li>Terms of the deal</li></ol><p id="966df37d-960f-412a-9701-1e3162551e4e" class="">/ for all Work and Strategy FLUX resources (will be our Holy book)</p><p id="81e7cb59-263a-41c9-954f-c1edee5607fd" class="">For all type of designs ( UI, Brand Identity, Graphic design made one common strategy paper at page no.11)</p><p id="6e69dcbf-e864-44a6-b9e3-67bab40da523" class="">
+</p></li></ul></li></ul><ul id="1156ce3f-bdc2-4e97-9fba-790b4353a65b" class="bulleted-list"><li style="list-style-type:disc"><strong>Brand Identity and Design ( will be discussed)</strong><p id="67e1c694-7f14-4857-b9ec-9653aa708401" class="">Beginning ( phase 1 and 2 )  - <strong>( — )</strong></p><table id="1cfda217-b326-4957-a582-75c579d0cfec" class="simple-table"><tbody><tr id="ee17cd7c-2883-4f29-b807-f0a02becf1ca"><td id="|{gf" class="">Total Time</td><td id="Q}iX" class="">—</td></tr><tr id="846ae397-00d7-4878-92a7-63aa6267ab1d"><td id="|{gf" class="">Total charge</td><td id="Q}iX" class="">—</td></tr><tr id="653fc033-f873-41a9-a58a-4a9c12fac2c5"><td id="|{gf" class="">Per hour</td><td id="Q}iX" class="">—-</td></tr></tbody></table><ul id="63a435ec-901f-49ff-a253-6b0fde775292" class="bulleted-list"><li style="list-style-type:circle">ole and money division<table id="6cd30fad-3008-438d-8a91-bbfdd67f8995" class="simple-table"><thead class="simple-table-header"><tr id="1e2a384b-902e-45d1-9c69-44c16f92b946"><th id="Zy{@" class="simple-table-header-color simple-table-header">Role</th><th id="sciM" class="simple-table-header-color simple-table-header">Rate (per hour)</th><th id="KYeg" class="simple-table-header-color simple-table-header">Time (hrs.)</th><th id="?cJd" class="simple-table-header-color simple-table-header">Sub-total($)</th></tr></thead><tbody><tr id="852eaf14-78ff-45cd-b689-d794a21cbba5"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="0bdc6533-5c2b-45ee-afab-9bc7ff60b687"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="2c6e6b37-a829-40fe-8234-3c847d535493"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="b814902e-210e-4d46-affe-48c5fc175342"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="988a948e-e51c-4584-ba73-d9abd7846a84"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="e704f245-048b-4a8c-b035-50c009172d1c"><td id="Zy{@" class="">—</td><td id="sciM" class="">—</td><td id="KYeg" class="">—</td><td id="?cJd" class="">—</td></tr><tr id="cc459f2c-fd38-4128-870a-ba8624c2706c"><td id="Zy{@" class="block-color-gray_background">Total</td><td id="sciM" class="block-color-gray_background"></td><td id="KYeg" class="block-color-gray_background">—</td><td id="?cJd" class="block-color-gray_background">—</td></tr></tbody></table><p id="8bbc6db1-ac78-410f-9c59-5b077f36f96b" class="">Total Charge :—</p><p id="ce86d008-773d-4fa9-82fb-bddb2cc11671" class="">Worked for : —</p><p id="98b2f302-ece1-4a6b-b083-ca2912fb8438" class="">Profit : —</p><p id="07146a33-bde6-4562-9aec-23d1f0fa82ca" class="">Total Time : —</p><p id="dbf4bca0-82f9-4dbf-9e10-05229f0c027b" class="">Total time has to be used : —</p><p id="0507ff6a-b482-4346-9386-a63d7f914b25" class="">Hours saved : —</p><p id="af549058-d4f7-4f2c-8518-fc60f91bc350" class=""> <em>what to do in that </em>— <em>hrs (of that </em>—<em>)?</em><div class="indented"><p id="e2d60fdf-64bb-42a9-866d-90b9cfac3a43" class="">⇒ Building some—</p><p id="d905ae78-44a4-4c83-9168-813bb7d63a07" class="">
+</p></div></p><p id="f832c6e7-3146-4734-8147-5a3c417d136d" class="">
+</p><p id="fe57ce3a-e524-4ed5-8d27-ad0ee098018e" class="">
+</p></li></ul><ul id="288e305f-12a3-48c7-a191-025a9cc14a30" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-brown">How to make client we are worth it?</mark><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1c651e11-a621-49eb-ab3b-e801ebaa0fe6"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Best method to make deal is over Call or Zoom , Texting won’t make us trust and eligible for them.
+Having sessions with the client. Pre-planning how we gonna utilize the time.</div></figure><p id="6aec8c3a-c94b-4452-bd7d-d56c26a0faa1" class="">
+</p><ul id="bd91a44f-4290-4fab-a85e-acf5d65c013b" class="bulleted-list"><li style="list-style-type:square">Explain how we process the total work.</li></ul><ul id="96bfc557-406b-455d-a99f-6f9e225831d3" class="bulleted-list"><li style="list-style-type:square">Explaining him/her how his/her money is utilized and we are not overcharging..</li></ul><ul id="04a0b8e4-ad55-4c32-a11c-5621dddcde3b" class="bulleted-list"><li style="list-style-type:square">Showing previous practice UI designs , our UI kits sold.</li></ul><ul id="27370387-dc43-4416-b9e3-630275732bb6" class="bulleted-list"><li style="list-style-type:square">How good are we with the deadlines</li></ul><ul id="bdcd2cc5-ea3f-4357-ac15-8f6e1d1ee7fb" class="bulleted-list"><li style="list-style-type:square">Explaining little bit of Trust the process.</li></ul></li></ul><ul id="3505dedb-9dd0-4459-a1c7-c5c00a63bf25" class="bulleted-list"><li style="list-style-type:circle">Proposal to the client we like to work with .<ol type="1" id="3ac86485-7d90-412b-9d58-000dcd9423e2" class="numbered-list" start="1"><li><strong>Overview &amp; goals</strong><ul id="caa837d3-b599-4f21-b81e-a36c2ead8c68" class="bulleted-list"><li style="list-style-type:disc"></li></ul></li></ol><ol type="1" id="56bfa9fb-9d46-494e-b41e-53c7a3d00729" class="numbered-list" start="2"><li>Why the client should be working with you<ul id="26f800dc-1f54-4d6f-98b1-b6b8f374d2a8" class="bulleted-list"><li style="list-style-type:disc"></li></ul></li></ol><ol type="1" id="9f56be1e-568f-404e-b53c-8bdef69d1ec1" class="numbered-list" start="3"><li>Package &amp; Pricing<ul id="bad97938-668a-4bab-8553-1f51137beb87" class="bulleted-list"><li style="list-style-type:disc"></li></ul></li></ol><ol type="1" id="a63afd05-76dc-45bf-a7b3-91b4e0061284" class="numbered-list" start="4"><li>Project timeline<ul id="fec0ccd6-db79-44de-8215-16e9ca8e47e5" class="bulleted-list"><li style="list-style-type:disc"></li></ul></li></ol><ol type="1" id="ebf7d43c-b72b-45ce-98ab-054ac965cd66" class="numbered-list" start="5"><li>What’s next?</li></ol><ol type="1" id="2bc9ef2c-49b5-49a8-873c-24b92525c661" class="numbered-list" start="6"><li>Terms of the deal</li></ol><p id="eec71269-7096-49c1-8371-e153ccb6c823" class="">/ for all Work and Strategy FLUX resources (will be our Holy book refer page no.19)</p><p id="4dcfdede-9668-4d1f-8637-2e63d86ffc51" class="">For all type of designs ( UI, Brand Identity, Graphic design made one common strategy paper at page no.10</p><p id="17235fdc-9ba4-4dcb-9d8f-3c845be381dc" class="">
+</p></li></ul><p id="542571f8-b7f3-4be6-b121-43666770ce03" class="">
+</p></li></ul><ul id="38cb5e39-e99b-413f-bb91-fe415039387f" class="bulleted-list"><li style="list-style-type:disc"><strong>Graphic Design Poster</strong><p id="11367a7c-2388-4362-912c-37d0b174460c" class="">Beginning ( phase 1 and 2 )  - <strong>( — )</strong></p><table id="dda87c92-054f-49bc-b005-9e912b3b3314" class="simple-table"><tbody><tr id="c5138a41-7bad-4012-839e-5a45d42a7acd"><td id="|{gf" class="">Total Time</td><td id="Q}iX" class="">8Hrs</td></tr><tr id="995cee3c-96f1-41b4-b1d2-126756219b5a"><td id="|{gf" class="">Total charge</td><td id="Q}iX" class="">150 Dollars</td></tr><tr id="3792ec09-5cc9-4781-9666-65d11637b51b"><td id="|{gf" class="">Per hour</td><td id="Q}iX" class="">18.75 Dollar</td></tr><tr id="750b2514-0c75-4320-b189-84d09a1dfc15"><td id="|{gf" class=""></td><td id="Q}iX" class=""></td></tr></tbody></table><ul id="fdfa62d6-9aa7-41f3-9f16-fdc42bc0c4a5" class="bulleted-list"><li style="list-style-type:circle">role and money division<table id="f392b3e7-cb30-49cb-990d-04929f59adae" class="simple-table"><thead class="simple-table-header"><tr id="c4863805-7e59-42ff-8b54-b2ca53462e95"><th id="Zy{@" class="simple-table-header-color simple-table-header">Role</th><th id="sciM" class="simple-table-header-color simple-table-header">Rate (per hour)</th><th id="KYeg" class="simple-table-header-color simple-table-header">Time (hrs.)</th><th id="?cJd" class="simple-table-header-color simple-table-header">Sub-total($)</th></tr></thead><tbody><tr id="0cc26c38-ddba-4ac4-aeb2-4e7f4a816faa"><td id="Zy{@" class="">Plan and research</td><td id="sciM" class="">5$</td><td id="KYeg" class="">1hrs</td><td id="?cJd" class="">5</td></tr><tr id="a9b9a21c-3e2a-4805-95da-e35df661caf3"><td id="Zy{@" class="">Mood board</td><td id="sciM" class="">5$</td><td id="KYeg" class="">1 1/2 hrs.’</td><td id="?cJd" class="">7.5</td></tr><tr id="a3f9d872-dff4-450f-931a-2a2bc915386f"><td id="Zy{@" class="">Perform</td><td id="sciM" class="">15$</td><td id="KYeg" class="">3hrs</td><td id="?cJd" class="">45</td></tr><tr id="69f4ec6d-2f82-4202-92b0-8712224e203f"><td id="Zy{@" class="">Retouch and Test</td><td id="sciM" class="">5$</td><td id="KYeg" class="">1/2 hrs.’</td><td id="?cJd" class="">2.5</td></tr><tr id="afec7548-8975-4e02-903a-caf0ba53cb18"><td id="Zy{@" class="block-color-gray_background">Total</td><td id="sciM" class="block-color-gray_background"></td><td id="KYeg" class="block-color-gray_background">—</td><td id="?cJd" class="block-color-gray_background">60$</td></tr></tbody></table><p id="ff2f72ca-c01c-4242-a64b-6b7f993e35cc" class="">Total Charge : 150</p><p id="5d0b9455-3e73-4f44-beb7-62d112be6771" class="">Worked for : 60$</p><p id="0393b7da-89ba-483f-b7e8-465dd56da6bf" class="">Profit : 90$ </p><p id="14e47e14-6a8e-4504-b3e5-7a389753bee0" class="">Total Time : 6hrs</p><p id="c3a5081a-5477-4ed3-a372-a7a36967828c" class="">Total time has to be used : 8hrs</p><p id="bfe8a0c1-ee65-4b6b-9237-f0c88c94840d" class="">Hours saved : 2hrs</p><p id="d5f7f25a-45aa-4f0f-b9f2-5743ee24cffd" class=""> <em>what to do in that 2</em> <em>hrs. ?</em><div class="indented"><p id="a0e087f3-7317-4372-99cf-5be2f3e22cc8" class="">⇒ Rest and watching friends 🤣</p><p id="b1b49f06-7c45-45bc-ba87-783c37884933" class="">
+</p></div></p></li></ul><blockquote id="4f39f246-7fbd-44a1-a5e0-535036256544" class="">I know I made this quite expensive because it is not main thing if someone wants they have to pay  to our time. (helps us reach 100 faster only) - 
+I know u don’t like poster design but I will do it and some team mates from phase -3 helps to reach that 100K.</blockquote><p id="c816ec24-5bff-41eb-899e-f6ac2b69bb56" class="">
+</p><ul id="9f1e5821-028f-4ef4-9f30-4ca10893ac5f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-brown">How to make client we are worth it?</mark><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="77d1d188-02e6-420a-97d5-d56f2e3e3021"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Best method to make deal is over Call or Zoom , Texting won’t make us trust and eligible for them.
+Having sessions with the client. Pre-planning how we gonna utilize the time.</div></figure><p id="307d9af2-4b26-4c09-9f7e-373a6c4ea0b0" class="">
+</p><ul id="eb913cd6-1e46-4ab9-b49e-d2e69dd4ec11" class="bulleted-list"><li style="list-style-type:square">Explain how we process the total work.</li></ul><ul id="55742ccd-fd66-40b3-b99f-01b72da9499d" class="bulleted-list"><li style="list-style-type:square">Explaining him/her how his/her money is utilized and we are not overcharging..</li></ul><ul id="ee9457ff-8bfd-4a32-8c34-943310b946a6" class="bulleted-list"><li style="list-style-type:square">Showing previous practice UI designs , our UI kits sold.</li></ul><ul id="5f305b13-6d96-4813-ac46-ccb44178bedc" class="bulleted-list"><li style="list-style-type:square">How good are we with the deadlines</li></ul><ul id="93363082-9904-4d86-8124-ec148ad6607c" class="bulleted-list"><li style="list-style-type:square">Explaining little bit of Trust the process.</li></ul></li></ul><ul id="85a3b4f8-8720-4c4f-974b-922dd6757c46" class="bulleted-list"><li style="list-style-type:circle">Proposal to the client we like to work with .<ol type="1" id="db6fc253-9edf-4cca-87cc-f45ebfdbe19e" class="numbered-list" start="1"><li><strong>Overview &amp; goals</strong><ul id="68a6702d-f169-4a91-ad91-e8d4a94c7aae" class="bulleted-list"><li style="list-style-type:disc">Talk about their problem, the solution you provide, as well as the goal or end results you’ll be helping them with and which deliverables.</li></ul></li></ol><ol type="1" id="369a4f35-c279-493f-a2de-5b09888aadb4" class="numbered-list" start="2"><li>Why the client should be working with you<ul id="e7e565b0-63ce-493a-a8d5-095f7a3c5060" class="bulleted-list"><li style="list-style-type:disc">Tell clients why we are worth working with them. and how do we work with them.</li></ul></li></ol><ol type="1" id="b592d921-5bd6-44d9-8c19-05b26fb3e207" class="numbered-list" start="3"><li>Package &amp; Pricing<ul id="64321d11-a372-45cd-a7ae-9beb5e29be13" class="bulleted-list"><li style="list-style-type:disc">Explained before on top of the page ( we will together make a template for all this on 5th 6th and 7th August over <strong>fig jam or Zoom</strong></li></ul></li></ol><ol type="1" id="73d6b96e-a912-45c8-ae89-7176a573fff2" class="numbered-list" start="4"><li>Project timeline<ul id="d2170230-ea1f-4066-9fb0-6de8d4bdd998" class="bulleted-list"><li style="list-style-type:disc">Plan together (i can’t do it alone I need u r opinion) (i will update here once we discuss.</li></ul></li></ol><ol type="1" id="a245f53a-9289-43fe-b09c-1dd824667336" class="numbered-list" start="5"><li>What’s next?</li></ol><ol type="1" id="1f600101-88d4-4200-a923-c29fa2d3484b" class="numbered-list" start="6"><li>Terms of the deal</li></ol><p id="1cc2cf8c-58e8-4c59-aac3-3326961354af" class="">// for all Work and Strategy FLUX resources (will be our Holy book)</p><p id="cfc9fb0e-4b5e-46e9-91da-84d455e43143" class="">For all type of designs ( UI, Brand Identity, Graphic design made one common strategy paper at page no.11).</p><p id="173c8ea8-5589-467b-9181-c986bbf06794" class="">
+</p></li></ul><h3 id="0de583b3-1ee0-4dff-9d08-097b63a87f88" class=""><strong>So how to sell or reach clients?</strong></h3><ul id="49a3e472-cca0-4d44-8c8e-16a20dec179e" class="bulleted-list"><li style="list-style-type:circle">Over Discord we get many clients who need work to be done very fast.</li></ul><ul id="91cf85a4-b6b0-4189-8f21-54becba52f45" class="bulleted-list"><li style="list-style-type:circle">Upwork or Freelancer website. </li></ul><p id="10bfb559-03ef-4250-8e61-f71e326f3199" class="">
+</p></li></ul></div></article></body></html>

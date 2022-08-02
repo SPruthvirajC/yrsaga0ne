@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>5.Instagram Content Page</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3cf625e7-d5ff-4f5b-9d9d-b348c2555441" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="5%20Instagram%20Content%20Page%203cf625e7d5ff4f5b9d9db348c2555441/icons8_Instagram.svg"/></div><h1 class="page-title">5.Instagram Content Page</h1></header><div class="page-body"><ol type="1" id="234b6f80-6d13-4e45-8e62-0ef0c0b6b11b" class="numbered-list" start="1"><li>Aim of Instagram Content<ul id="fafdd128-f939-41a2-a008-3e5ae0a0a2e7" class="bulleted-list"><li style="list-style-type:disc">Bringing and building the content.</li></ul><ul id="cc431d0d-b30c-41b9-b487-bd294dd62ae8" class="bulleted-list"><li style="list-style-type:disc">Reaching the world of artist everywhere.</li></ul></li></ol><ol type="1" id="854232e2-4d8c-4540-8d66-953ae632b6e2" class="numbered-list" start="2"><li>What Content for Instagram</li></ol><ol type="1" id="a15e0c95-36b8-472d-93eb-f411b247511b" class="numbered-list" start="3"><li>How to spread the content to the world?</li></ol><ol type="1" id="663df3c6-bc98-47d7-823a-4a22f110c438" class="numbered-list" start="4"><li>Content to community.</li></ol><ol type="1" id="82013f8f-671b-48f7-a221-a1bca77d8820" class="numbered-list" start="5"><li>How to grow organic followers.</li></ol><ol type="1" id="780d4d24-fa26-4d16-ba80-ad0079662292" class="numbered-list" start="6"><li>Who are our competitors?</li></ol><ol type="1" id="fa5efed8-3a7d-4d18-8729-ceb8e07042b8" class="numbered-list" start="7"><li>Collaborations?</li></ol><ol type="1" id="5a09139f-c61b-4117-b266-91a9b4ecc8c5" class="numbered-list" start="8"><li>SMART Goals (marketing goal)</li></ol><ol type="1" id="6ca97e1b-b96a-4774-b562-0a0106ec1354" class="numbered-list" start="9"><li>Sales target from instagram</li></ol><p id="57227cd4-a79d-4988-99a9-74b1b622cc5f" class="">
+</p><p id="3e5df374-6c17-464a-8f24-743de5f8abb7" class=""><em><strong><mark class="highlight-orange_background">Phase 01 - </mark></strong></em><mark class="highlight-pink_background"><em><strong> </strong></em></mark><mark class="highlight-pink_background">August to September (1K)</mark><mark class="highlight-pink_background"><em><strong>   </strong></em></mark><em><strong><mark class="highlight-orange_background">    8 weeks                                                                                                           </mark></strong></em></p><ul id="03163fe5-63b4-4170-9eb8-821297d37276" class="bulleted-list"><li style="list-style-type:disc">Targeted followers 210 to 450 (daily 5 new followers is the target)</li></ul><ul id="9b497d70-84ce-4e8f-a274-ab6f400feb01" class="bulleted-list"><li style="list-style-type:disc">How to bring followers<ul id="db1bdbf6-82e1-466c-9f7c-e80b37049226" class="bulleted-list"><li style="list-style-type:circle">Posting other work on stories and post(secondary posts).</li></ul><ul id="d843290c-7386-492a-94b6-f2f6b96297df" class="bulleted-list"><li style="list-style-type:circle">Creating Challenges and events on Instagram (with discord)</li></ul><ul id="6eb76996-e277-49cd-bdc1-dbfefff7a7b4" class="bulleted-list"><li style="list-style-type:circle">Following Trend on Instagram reels (may be revealing face on Instagram 🤔.)</li></ul><ul id="f6c5890a-4c8a-4770-9b2b-92cc2dfe033b" class="bulleted-list"><li style="list-style-type:circle">Posting Changes :<ul id="2276d277-5c73-4218-afd1-dcca9d61a213" class="bulleted-list"><li style="list-style-type:square">1 Daily Post (as usual)</li></ul><ul id="a06267ce-213d-4a13-9cae-888e83ac3bde" class="bulleted-list"><li style="list-style-type:square">for every 2days Carousels on resources, tips and tricks, (even short articles)</li></ul><ul id="746a94b0-85b5-46a7-b83e-6e28affaeff0" class="bulleted-list"><li style="list-style-type:square">Winners and competition announcements (over stories).</li></ul><p id="57af2b40-e3b8-4cf0-96fa-18b8422d0909" class="">
+</p></li></ul></li></ul><ul id="fd0b6d10-dabe-4882-bb90-cc4daabc9e13" class="bulleted-list"><li style="list-style-type:disc">Content Spreading <ul id="caec4edb-0704-4909-8664-160d423ea9bb" class="bulleted-list"><li style="list-style-type:circle">Sharing post to some known friends and family.</li></ul><ul id="dcf46db8-4790-45b1-ac6a-5474f8ca3ce1" class="bulleted-list"><li style="list-style-type:circle">Sharing over other social medias <ul id="b7b60bde-603e-4207-b0cf-4455333eac12" class="bulleted-list"><li style="list-style-type:square">Discord</li></ul><ul id="50ad2790-4848-4246-ab86-046ced9dd1b0" class="bulleted-list"><li style="list-style-type:square">Facebook Groups</li></ul><ul id="ac4044f4-5e5c-4224-b65e-e4d800a4543a" class="bulleted-list"><li style="list-style-type:square">Twitter</li></ul></li></ul></li></ul><ul id="5c23fe23-8353-4f06-a996-8eb0f99ab33b" class="bulleted-list"><li style="list-style-type:disc">What to post<ul id="d03ee94e-8762-44f1-a67f-50d8f39ecd96" class="bulleted-list"><li style="list-style-type:circle">From now on we will discuss weekly on posts to done on upcoming week.</li></ul><ul id="3cfc2632-c2e0-47f2-b592-a053521af30b" class="bulleted-list"><li style="list-style-type:circle">Study the trend do the designs.</li></ul><p id="65b8f4b1-1bf6-44ee-854b-800847a2ee36" class="">
+</p><div id="7b113a88-7fd5-4ee3-87fb-d9852efec71a" class="column-list"><div id="3db3f1c1-5a33-4611-b109-1f1ad8fd3370" style="width:93.75%" class="column"><table id="c2ed1c42-37b7-4492-b5ad-87c33bf8ed40" class="simple-table"><thead class="simple-table-header"><tr id="18e5b4ab-97da-4272-b52d-5c2d86029d98"><th id="h{ln" class="block-color-red simple-table-header" style="width:115.275px">Phase 01 Week </th><th id="r&lt;T_" class="block-color-red simple-table-header" style="width:115.275px">Design Type</th><th id="RF[j" class="block-color-red simple-table-header" style="width:115.275px">Improvement</th><th id="ZJOt" class="block-color-red simple-table-header" style="width:115.275px">Followers Gain</th><th id="`~=k" class="block-color-red simple-table-header" style="width:115.275px">Remarks</th></tr></thead><tbody><tr id="23124225-2884-4144-bd1a-07bfc80de2d3"><td id="h{ln" class="" style="width:115.275px">01</td><td id="r&lt;T_" class="" style="width:115.275px">80’s Design</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="59bdd5b8-a855-4617-8994-5ed2d5f0b317"><td id="h{ln" class="" style="width:115.275px">02</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="8541e892-1c59-4ba5-8c1a-d3d8361dce5e"><td id="h{ln" class="" style="width:115.275px">03</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="189e53aa-d6cf-48cf-8b04-409d2cfc6085"><td id="h{ln" class="" style="width:115.275px">04</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="3bbf3f10-07e9-4b20-84f5-3fa81e6c127c"><td id="h{ln" class="" style="width:115.275px">05</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="a04da8d6-d98d-4f93-b9bb-b8893b534b3b"><td id="h{ln" class="" style="width:115.275px">06</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="f8893c33-0a98-4824-80ce-459531274f79"><td id="h{ln" class="" style="width:115.275px">07</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr><tr id="1eabd9b3-3e51-47d4-9c87-094397601b74"><td id="h{ln" class="" style="width:115.275px">08</td><td id="r&lt;T_" class="" style="width:115.275px">To be D</td><td id="RF[j" class="" style="width:115.275px"></td><td id="ZJOt" class="" style="width:115.275px"></td><td id="`~=k" class="" style="width:115.275px"></td></tr></tbody></table><p id="9c73a42f-f23a-42cf-9948-321c782e0957" class=""><strong>To be D == To be discussed</strong></p><p id="c8dd8cec-e8e9-46c6-a66c-8cc248948f68" class="">
+</p><ul id="a92ff2d7-b1fa-4fea-a73e-415d6346de2a" class="bulleted-list"><li style="list-style-type:disc">What reels and tiktok? (every 2days once)<ul id="b25ed59c-0a6e-4e41-9bbb-c1e4f5f3537f" class="bulleted-list"><li style="list-style-type:circle">BTS of the design</li></ul><ul id="da4dd3b5-4c4c-40ba-a345-b831bb86abdb" class="bulleted-list"><li style="list-style-type:circle">Tutorials and Resources</li></ul><ul id="0ea0c708-cde2-455e-b405-547ce434e2de" class="bulleted-list"><li style="list-style-type:circle">How to design thinking</li></ul></li></ul><ul id="1b982242-bee1-45f7-af3e-a2908f9ac6a8" class="bulleted-list"><li style="list-style-type:disc">Stories<ul id="013e91a0-0dc2-4cf8-b694-39f8630ab047" class="bulleted-list"><li style="list-style-type:circle">Daily Post Stories</li></ul><ul id="ed5ec748-a854-4c0c-89c7-f77a8e17cf94" class="bulleted-list"><li style="list-style-type:circle">Daily Design Memes</li></ul><ul id="b5a6ed02-a2ee-4ec4-a330-29c70c8897dd" class="bulleted-list"><li style="list-style-type:circle">Laugh-o-meters</li></ul><ul id="3adb3696-20be-40d5-acf3-18e23755fcb7" class="bulleted-list"><li style="list-style-type:circle">Products advertisment.</li></ul><ul id="aea0490f-75e0-4d68-a2f7-9e6d172c8e7c" class="bulleted-list"><li style="list-style-type:circle">Polls.</li></ul><p id="ea21a673-50f2-4d74-8728-8f85a730600f" class="">
+</p></li></ul></div><div id="2e8ef3a2-4eeb-499b-9813-f66adbe4b7fc" style="width:6.25%" class="column"><p id="908a4fed-b500-4022-947a-1228493797ad" class="">
+</p><p id="c0bb7eb3-1159-4a04-8467-4d14f49803f0" class="">
+</p></div></div></li></ul><ul id="34c66f43-fd3a-4295-b2cd-4c30e33f83e8" class="bulleted-list"><li style="list-style-type:disc">Collaboration List<p id="c76edab1-d99d-4628-8c41-c5fbccfdba72" class="">you will find in <strong>Page no. 19</strong></p></li></ul><ul id="89a2d0c1-9996-4376-b491-520e5d734602" class="bulleted-list"><li style="list-style-type:disc">Best designers we may take in team<p id="145fdbf7-f0e3-487f-aaf0-b0e6cd0c5281" class="">you will find in <strong>Page no. 19</strong></p></li></ul><ul id="69ef47e4-ec85-4f67-94a8-0fd402e47679" class="bulleted-list"><li style="list-style-type:disc">Who are our competitors.?<p id="a6f1b997-6a3c-43b3-80e2-5b1e7fe5cb3f" class="">you will find in <strong>Page no. 19</strong></p></li></ul></div></article></body></html>

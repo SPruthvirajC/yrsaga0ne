@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Planning(August)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="66aa0254-21dc-4877-964b-6a019a16574c" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Planning(August)%2066aa025421dc4877964b6a019a16574c/insta_Logo_2.png"/></div><h1 class="page-title">Planning(August)</h1></header><div class="page-body"><ol type="1" id="79e82f89-3b32-4571-a999-9a240863782c" class="numbered-list" start="1"><li><strong>Discord Community</strong> - forming</li></ol><ol type="1" id="67751505-b0d9-497b-91b2-991e89e35251" class="numbered-list" start="2"><li>Y<strong>ouTube Restart Planning </strong>(Both Channel)</li></ol><ol type="1" id="6c00258f-4666-4c67-b2cf-3b865a66319e" class="numbered-list" start="3"><li>YR RoadMap - <strong>Phase 01</strong> Release date out - <strong>1st August 2022</strong></li></ol><ol type="1" id="bb4338cb-08a0-450c-b337-6e3dfc1aaaf3" class="numbered-list" start="4"><li><em>Daily Drawing 2.0 </em>- new name = <strong>YR Illustrates </strong></li></ol><ol type="1" id="81ab1d9d-e11e-44b6-85d5-55a3a127e568" class="numbered-list" start="5"><li><strong>Monicaing </strong>3.0 -  Some <em>update and fixes</em></li></ol><ol type="1" id="e5142137-4e56-4f9a-95f8-57f6f72e0958" class="numbered-list" start="6"><li><strong>Articles , Text tutorials </strong>on <em>Medium </em>and <em>Discord</em></li></ol><ol type="1" id="3649e5f4-afac-401a-98d7-6c45fde489a5" class="numbered-list" start="7"><li>Planning and initial ideation on our <strong>AI Assistant - Naming and Goals</strong></li></ol><ol type="1" id="cc5d563a-6bce-4f36-bf0b-239a79842379" class="numbered-list" start="8"><li><strong>Rebranding YUYA MEI </strong>YouTube Channel &amp; Even planning + Podcast.</li></ol><ol type="1" id="6ec7e6a1-b27c-4406-ab92-abc2d1efe7a1" class="numbered-list" start="9"><li>Changing <strong>motto </strong>and <em>upgrade some new ideas</em> in YR.</li></ol><ol type="1" id="a624ae10-5149-488c-aa35-16c14f4516d2" class="numbered-list" start="10"><li><strong>Building and Selling</strong> design resources like U<em>I Kits , Design Assets, Templates, Textures, overlays, Fonts and icons.</em></li></ol><ol type="1" id="3d77ec2a-98f8-4a7a-a8ec-5090c5c26032" class="numbered-list" start="11"><li><em>3 New Fonts </em>- 1Sans Serif &amp; 2 Decorative Fonts - (Font names :<em>Indica , Phoebe,</em> …..)</li></ol><ol type="1" id="e1c4a003-3224-4df5-9146-82d6ab3985cc" class="numbered-list" start="12"><li><strong>News lettering </strong>- from Yuya Mei newsletter subscribers.</li></ol><ol type="1" id="5037eee5-098b-4c04-a8d6-73f117dcafdf" class="numbered-list" start="13"><li>(depends on Yuya) Making some <strong>friends circle from china</strong> and bringing in discord community - <em>(we get clients eventually).</em></li></ol><ol type="1" id="3da56791-ad40-4734-b910-8f4c47392e52" class="numbered-list" start="14"><li>Rebranding and Building LinkedIn<em><strong> Personal portfolio Initialization.</strong></em></li></ol><ol type="1" id="59120ef5-74c8-4604-980a-a787572e99e9" class="numbered-list" start="15"><li>Instagram Target <strong>550Followers</strong>. YouTube ( <em>Yuya - 500 , YR - 150)</em></li></ol><ol type="1" id="ef51a500-63f1-4446-a861-4db7a3b0a114" class="numbered-list" start="16"><li>Min. <strong>2 Collab videos</strong> for Yuya Mei channel.</li></ol><ol type="1" id="010087d6-70f0-48fa-a87a-b6548a8923e1" class="numbered-list" start="17"><li>Complete some Professional ideas by <em>reading book</em>- No certain number </li></ol><ol type="1" id="8b35fa00-9763-422f-aa3b-91cdab3c948e" class="numbered-list" start="18"><li><strong>Complete and success everything.</strong></li></ol><p id="a28f7067-0025-499a-8393-27da6efa4a72" class="">
+</p><p id="5eeeab18-ad9f-413d-8140-7c6c79a80ad3" class="">
+</p><p id="aaf1b128-86c0-47b3-b463-585b7d08230c" class="">
+</p><h1 id="337f3c65-6c38-4f85-a59e-313b115d3022" class="">1. <strong>Discord Community</strong> - forming</h1><figure id="4974f73b-f6c2-4400-84e1-7b6823242685" class="image"><a href="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled.png"><img style="width:1280px" src="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled.png"/></a></figure><p id="a175d778-ddfc-4296-b312-ea9d8955d261" class="">.1. Art showcase</p><ol type="1" id="f3285ade-84a4-4720-b79c-d6f3b94a57aa" class="numbered-list" start="2"><li>Build Community of designers</li></ol><ol type="1" id="528fe52c-6cef-49f6-8123-4648c2115165" class="numbered-list" start="3"><li>Sell resources </li></ol><ol type="1" id="5ef893a8-61bc-471c-ba17-58abb8d16851" class="numbered-list" start="4"><li>Bringing the designer fellows in podcasts and videos</li></ol><ol type="1" id="b0ebbcbe-f9d5-4a59-a132-8015b16757c0" class="numbered-list" start="5"><li>Guiding and helping designers.</li></ol><ol type="1" id="d46aef6c-33df-4f49-9ce2-20f53817a205" class="numbered-list" start="6"><li>UX community to Visual community building.</li></ol><ol type="1" id="4c8e35b9-643e-4b76-b589-4e2983907c7c" class="numbered-list" start="7"><li>Design Hangouts</li></ol><ol type="1" id="3c584392-6cd2-4c1f-8682-836f38d98ff4" class="numbered-list" start="8"><li>Off-topic hangouts</li></ol><ol type="1" id="44e11a8a-551f-4ef0-b3af-cc54e8f8c08e" class="numbered-list" start="9"><li>Events and competition - weekly and monthly</li></ol><ol type="1" id="c1a1289a-373a-496e-83fd-7f953f902347" class="numbered-list" start="10"><li>Daily Challenge.</li></ol><ol type="1" id="4366acee-ca72-43e6-84fa-58c232b58e50" class="numbered-list" start="11"><li>many more..</li></ol><ol type="1" id="0d0acef6-b03c-49d6-8031-0d210cd6a266" class="numbered-list" start="12"><li>Some done - </li></ol><figure id="3b514e59-892e-4c61-84d3-8446b25077d7"><a href="https://discord.gg/vGc6M5uE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Join the YR Design Studios Discord Server!</div><div class="bookmark-description">Check out the YR Design Studios community on Discord - hang out with 3 other members and enjoy free voice and text chat.</div></div><div class="bookmark-href"><img src="https://discord.com/assets/ec2c34cadd4b5f4594415127380a85e6.ico" class="icon bookmark-icon"/>https://discord.gg/vGc6M5uE</div></div><img src="https://cdn.discordapp.com/icons/964406720736665600/309e824b286fa8559194a161cd0ee676.jpg?size=256" class="bookmark-image"/></a></figure><h1 id="3e577548-c752-405d-84fa-a8fe8156c324" class="">2. YouTube Restarting both channel</h1><figure id="66d69953-9249-463c-9887-e0f3af0d6bd5" class="image"><a href="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled%201.png"><img style="width:1112px" src="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled%201.png"/></a></figure><ol type="1" id="99fe83d1-9c3a-4f94-a702-d41dd3bfb3b2" class="numbered-list" start="1"><li><strong> Channel Yuya mei</strong></li></ol><ul id="25d33924-5990-42d5-9008-54b4b5b4f5bd" class="bulleted-list"><li style="list-style-type:disc">Only for chinese community</li></ul><ul id="f32f25a9-b8ae-455c-809e-10712aa02ce4" class="bulleted-list"><li style="list-style-type:disc">Rebranding and Rebuilding channel</li></ul><ul id="4f6b12fb-6f99-4c36-873d-a4f000681da8" class="bulleted-list"><li style="list-style-type:disc">Focusing on chinese communality </li></ul><ul id="44ecf6e4-c107-4234-b961-d528b2a903ba" class="bulleted-list"><li style="list-style-type:disc">Motivation Giving </li></ul><ul id="8295db58-3011-4cdd-993d-d9d23152249c" class="bulleted-list"><li style="list-style-type:disc">Shorts Too</li></ul><ul id="b1ae86ca-9bd4-4422-abe4-0ffc179d59d9" class="bulleted-list"><li style="list-style-type:disc">Design Tips and Marketing</li></ul><ul id="56b55dc0-49bb-4e40-8d8e-aa46553c2e44" class="bulleted-list"><li style="list-style-type:disc">Podcasts with discord community</li></ul><ul id="cfb1d2a0-f316-43f7-be89-fd5943f15ca4" class="bulleted-list"><li style="list-style-type:disc">Live Show (late august) and Events Hosts</li></ul><ul id="33d413c4-0f96-4c4e-9fb7-12c8dc525573" class="bulleted-list"><li style="list-style-type:disc">YR Design Community development</li></ul><ul id="1147f52d-86ec-464d-b475-802075a2c8af" class="bulleted-list"><li style="list-style-type:disc">How to Get ideas and inspiration sessions</li></ul><ul id="9d9b1077-371f-4073-93c5-ac4e0abb6411" class="bulleted-list"><li style="list-style-type:disc">Weekly 1  or 2 Videos <ul id="3d721600-097e-40b7-883c-1aa8ed5452e1" class="bulleted-list"><li style="list-style-type:circle">Timing not decided yet.  same as YR but weekly changes to monthly.</li></ul></li></ul><ul id="5792d169-0e43-4ba3-be4d-4c596eecf2de" class="bulleted-list"><li style="list-style-type:disc">Selling resources ( separately chinese website) - need one china designers in team (discord).</li></ul><p id="d4c163d0-7a41-498a-9e3c-e476aadb3003" class="">
+</p><figure id="0389e322-da54-417b-be94-61bf0e13a3c2" class="image"><a href="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled%202.png"><img style="width:1118px" src="Planning(August)%2066aa025421dc4877964b6a019a16574c/Untitled%202.png"/></a></figure><ol type="1" id="528237dc-c438-48fd-a82d-f93c2565686a" class="numbered-list" start="2"><li><strong>Channel YR Design Studios</strong></li></ol><ul id="497153ec-d805-4fd7-8d44-0a3f6ab78f86" class="bulleted-list"><li style="list-style-type:disc">Rest of the world</li></ul><ul id="6ad84905-07b4-442b-a9ae-a8c0d689769f" class="bulleted-list"><li style="list-style-type:disc">Rebranding and building Channel</li></ul><ul id="0fd57584-e733-45a3-9589-685c4493ceb5" class="bulleted-list"><li style="list-style-type:disc">Design Tutorials and Shorts.</li></ul><ul id="a60a45bf-a9be-434d-a953-5539e4b10185" class="bulleted-list"><li style="list-style-type:disc">How to Get ideas and inspiration sessions.</li></ul><ul id="30f0b4c2-9fd0-46a0-9424-4dcee0e64cc1" class="bulleted-list"><li style="list-style-type:disc">Live events hosting.</li></ul><ul id="2bf8aed6-f87e-4c83-bf15-bf9beb381b1c" class="bulleted-list"><li style="list-style-type:disc">Daily/weekly/Monthly challenges</li></ul><ul id="77b7d37a-8ef2-4c6e-be97-85d2f31ad7af" class="bulleted-list"><li style="list-style-type:disc">Weekly 3 Videos <ul id="2f9f9297-80ec-49cd-b17e-73e774d38826" class="bulleted-list"><li style="list-style-type:circle">Sunday - Review / portfolio .</li></ul><ul id="63c85976-9e33-440e-bee9-a55b59b0ea6b" class="bulleted-list"><li style="list-style-type:circle">Wednesday- Tutorials Tips and tricks.</li></ul><ul id="cc3fe8ff-d388-4605-aee3-c22f1c92f1c3" class="bulleted-list"><li style="list-style-type:circle">Saturday - Resources/Inspiration/Bringing guests</li></ul></li></ul><ul id="fadf65fb-6b70-473d-a540-2217702a4d41" class="bulleted-list"><li style="list-style-type:disc">Selling resources ( rest of the world) - Through Gumroad and shopify</li></ul><p id="5b86d62c-4d9e-4285-a421-a8c8043ca2d6" class="">
+</p><p id="948ed551-6860-4864-8b54-35755d7d8c5f" class="">
+</p><h1 id="f017636a-68ca-4de5-a575-7b3573db7296" class="">3. YR Roadmap - Phase 1 Release</h1><div id="8935d642-309e-4331-a9df-4121b323a716" class="column-list"><div id="d02e492e-b51e-4847-9c1b-19e45dbd3094" style="width:50%" class="column"><p id="70e8b108-955a-4d33-8732-81e5c44228b5" class=""><em><strong>The present document is part of phase 01</strong></em></p><p id="17a3065b-6f61-44d8-9938-e5f842f92e67" class=""><mark class="highlight-red">Phase 01 will be released on August 01</mark></p><p id="3379aa7b-ecee-409b-b4de-87c80ee08c9b" class=""><strong>Overview: </strong>Everything will be crystallized in the roadmap book on August 01 2022.</p><p id="786fb84a-a783-45c5-989b-994c455fc91d" class="">YR Roadmaps will be the bible for 100 to 100K process.</p><p id="224c1184-7016-4649-9cd7-126511be0533" class="">Each and every will be clearly told. More smart work done than the hard work.</p><p id="2093bd10-de9f-40c8-89bc-227eb1ae2df8" class="">Roadmap Phase 01 Period :<em><strong> July 18 2022 - June 18 2023</strong></em></p></div><div id="5b52182c-98f5-412a-b683-bf5d511ed103" style="width:50%" class="column"><figure id="c59400c0-1e2f-4bbd-81a9-84752ce08d8d" class="image"><a href="Planning(August)%2066aa025421dc4877964b6a019a16574c/roadmap.jpg"><img style="width:672px" src="Planning(August)%2066aa025421dc4877964b6a019a16574c/roadmap.jpg"/></a></figure></div></div><p id="a1b6ce69-bb1d-4276-a19d-f21b90cb86c3" class="">
+</p><h1 id="dccd5b9d-a798-4e4a-80bf-6f71cd491b39" class="">4. Daily Drawing 1.2 ( YR Illustrates)</h1><p id="ed2d5dc9-62b4-4476-8e2d-96611f203e94" class="">
+</p><ul id="2df2ccd6-4838-462a-99ff-fe59afece306" class="bulleted-list"><li style="list-style-type:disc">Daily drawing record between Y and R</li></ul><ul id="168398a2-8289-472c-ab75-1fed937665ac" class="bulleted-list"><li style="list-style-type:disc">Weekly Theme basics  - week one 25/07 to 31/07 - Household products drawing</li></ul><ul id="d313057b-fb65-45c8-a120-24e0f8596ec1" class="bulleted-list"><li style="list-style-type:disc">Submitting everyday at our first chat of the day (Like we did in webflow times)</li></ul><ul id="63344788-4ef2-4230-8291-ec457e37e81f" class="bulleted-list"><li style="list-style-type:disc">No submitter gets a bad punishment - Have to make tutorials that night with real time voice over - has to be given next day.</li></ul><ul id="4fd22f5a-7da2-448b-af90-99d680712415" class="bulleted-list"><li style="list-style-type:disc">All the best!!!</li></ul><h1 id="acef36f3-7d90-4cb7-966d-2ef238750629" class="">5 to 10 (tmrw)</h1><h1 id="af213677-cbf2-4c7c-9275-1d3bd27e6171" class="">11 to 15 (day after tmrw)</h1><h1 id="2ad16a68-b344-49f3-9242-2809b361be76" class="">16 to 18 + Learning section ( 27/07)</h1></div></article></body></html>
